@@ -1,4 +1,7 @@
 FROM node:22-slim
-workdir /app
-copy . .
-cmd ["npm", "start"]
+WORKDIR /app
+COPY package*.json .
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
