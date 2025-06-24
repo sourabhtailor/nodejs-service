@@ -23,4 +23,4 @@ jobs:
       run: |
          IMAGE_TAG=nodeimage:$(date +%s)
          docker build . --file Dockerfile --tag sourabhtailor/$IMAGE_TAG
-         docker push yourdockerhubusername/$IMAGE_TAG
+         docker push sourabhtailor/$IMAGE_TAG
