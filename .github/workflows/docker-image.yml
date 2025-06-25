@@ -39,6 +39,6 @@ jobs:
         script: |
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
           docker pull sourbhtailor/$IMAGE_TAG
-          docker stop myapp || true
-          docker rm myapp || true
+          docker stop nodeapp || true
+          docker rm nodeapp || true
           docker run -d --name nodeapp -p 80:3000 sourabhtailor/$IMAGE_TAG
