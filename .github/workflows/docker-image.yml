@@ -42,3 +42,4 @@ jobs:
           docker stop nodeapp || true
           docker rm nodeapp || true
           docker run -d --name nodeapp -p 80:3000 -e USERNAME="$APP_USERNAME" -e PASSWORD="$APP_PASSWORD" -e SECRET_MESSAGE="$APP_SECRET_MESSAGE" sourabhtailor/$IMAGE_TAG
+          envs: DOCKER_USERNAME,DOCKER_PASSWORD,APP_USERNAME,APP_PASSWORD,APP_SECRET_MESSAGE
