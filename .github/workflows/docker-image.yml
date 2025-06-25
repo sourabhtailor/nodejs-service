@@ -34,6 +34,8 @@ jobs:
             envs: DOCKER_USERNAME, DOCKER_PASSWORD, APP_USERNAME, APP_PASSWORD, APP_SECRET_MESSAGE
             script_stop: true
             script: |
+              if [ -z "$DOCKER_USERNAME" ]; then echo "🚫 DOCKER_USERNAME is missing"; fi
+              if [ -z "$DOCKER_PASSWORD" ]; then echo "🚫 DOCKER_PASSWORD is missing"; fi
               echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
               docker pull sourabhtailor/nodeimage:latest
               docker stop nodeapp || true
