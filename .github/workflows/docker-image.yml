@@ -17,7 +17,7 @@ jobs:
 
         - name: Build and Push docker image
           run:  |
-              docker image build . -t sourabhtailor/nodeimage:latest .
+              docker image build . -t sourabhtailor/nodeimage:latest
               docker push sourabhtailor/nodeimage:latest
    deploy:
      runs-on: ubuntu:latest
