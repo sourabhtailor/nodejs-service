@@ -20,7 +20,7 @@ jobs:
               docker image build . -t sourabhtailor/nodeimage:latest
               docker push sourabhtailor/nodeimage:latest
    deploy:
-     runs-on: ubuntu:latest
+     runs-on: ubuntu-latest
      
      steps:
        - name: deploy to remote server via ssh
