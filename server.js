@@ -10,7 +10,7 @@ const PORT = 3000;
 const requestHandler = (req, res) => {
   if (req.url === '/' && req.method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello, world!');
+    res.end('Hello, world! chnaged');
   } else if (req.url === '/secret' && req.method === 'GET') {
     const credentials = auth(req);
 
