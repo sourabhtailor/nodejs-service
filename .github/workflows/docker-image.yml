@@ -37,6 +37,7 @@ jobs:
         password: ${{secrets.SERVER_PASSWORD}}
         port: 22
         script: |
+          echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
           docker pull sourbhtailor/nodeimage:latest
           docker stop myapp || true
           docker rm myapp || true
