@@ -35,5 +35,5 @@ const requestHandler = (req, res) => {
 const server = http.createServer(requestHandler);
 
 server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://101.53.150.196:${PORT}`);
 });
